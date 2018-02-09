@@ -1,12 +1,47 @@
 h1
 {
         font-family: "Calibri", serif;
-        color: whitesmoke;
-        background-color:darkolivegreen
+        color: black;
+        background-color: transparent;
 }
 p
 {
     font-family: "Calibri", serif;
     color: black;
     font-size: 100%;
+}
+a:link {
+    font-family: Calibri, serif;
+    color: black;
+    background-color:yellowgreen;
+    text-decoration: none;
+    border: 5px solid black;
+    padding: 15px;
+}
+
+a:visited {
+    font-family: Calibri, serif;
+    color: black;
+    background-color:yellowgreen;
+    text-decoration: none;
+    border: 5px solid black;
+    padding: 15px;
+}
+
+a:hover {
+    font-family: Calibri, serif;
+    color: black;
+    background-color:yellowgreen;
+    text-decoration: none;
+    border: 5px solid black;
+    padding: 15px;
+}
+
+a:active {
+    font-family: Calibri, serif;
+    color: black;
+    background-color:yellowgreen;
+    text-decoration: none;
+    border: 5px solid black;
+    padding: 15px;
 }
