@@ -10,7 +10,7 @@ p
     color: black;
     font-size: 100%;
 }
-a:link {
+#button:link {
     font-family: Calibri, serif;
     color: black;
     background-color:yellowgreen;
@@ -19,7 +19,7 @@ a:link {
     padding: 15px;
 }
 
-a:visited {
+#button:visited {
     font-family: Calibri, serif;
     color: black;
     background-color:yellowgreen;
@@ -28,7 +28,7 @@ a:visited {
     padding: 15px;
 }
 
-a:hover {
+#button:hover {
     font-family: Calibri, serif;
     color: black;
     background-color:yellowgreen;
@@ -37,7 +37,7 @@ a:hover {
     padding: 15px;
 }
 
-a:active {
+#button:active {
     font-family: Calibri, serif;
     color: black;
     background-color:yellowgreen;
