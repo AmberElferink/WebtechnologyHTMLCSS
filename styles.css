@@ -10,6 +10,12 @@ p
     color: black;
     font-size: 100%;
 }
+th
+{
+    font-family: "Calibri", serif;
+    color: black;
+    font-size: 100%;
+}
 #button:link {
     font-family: Calibri, serif;
     color: black;
