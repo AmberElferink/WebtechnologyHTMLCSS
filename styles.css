@@ -16,38 +16,28 @@ th
     color: black;
     font-size: 100%;
 }
-#button:link {
-    font-family: Calibri, serif;
-    color: black;
-    background-color:yellowgreen;
-    text-decoration: none;
-    border: 5px solid black;
-    padding: 15px;
+
+
+#navigatie {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: pink;
 }
 
-#button:visited {
-    font-family: Calibri, serif;
-    color: black;
-    background-color:yellowgreen;
-    text-decoration: none;
-    border: 5px solid black;
-    padding: 15px;
+li {
+    float: left;
 }
 
-#button:hover {
-    font-family: Calibri, serif;
-    color: black;
-    background-color:yellowgreen;
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
     text-decoration: none;
-    border: 5px solid black;
-    padding: 15px;
 }
 
-#button:active {
-    font-family: Calibri, serif;
-    color: black;
-    background-color:yellowgreen;
-    text-decoration: none;
-    border: 5px solid black;
-    padding: 15px;
+li a:hover {
+    background-color: #111111;
 }
