@@ -1,33 +1,8 @@
-h1
-{
-        font-family: "Calibri", serif;
-        color: black;
-        background-color: transparent;
-}
-p
+body
 {
     font-family: "Calibri", serif;
     color: black;
-    font-size: 100%;
-}
-th
-{
-    font-family: "Calibri", serif;
-    color: black;
-    font-size: 100%;
-}
-
-
-#navigatie {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: pink;
-}
-
-li {
-    float: left;
+    background-color: transparent;
 }
 
 li a {
@@ -39,5 +14,22 @@ li a {
 }
 
 li a:hover {
-    background-color: #111111;
+    background-color: #801D18;
+}
+
+#navigatie {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #B02721;
+}
+#navigatie li {
+    float: left;
+}
+
+
+
+#subtitlerecepies {
+    text-align: center;
 }
