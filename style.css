@@ -1,11 +1,11 @@
-body
+h1
 {
         font-family: "Calibri", serif;
         color: black;
         background-color: transparent;
+    text-align: center;
 }
-
-th
+p
 {
     font-family: "Calibri", serif;
     color: black;
@@ -13,19 +13,19 @@ th
 }
 
 
-#navigatie {
+
+#navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: pink;
+    background-color: #B02721;
 }
-#navigatie li {
 
+
+li {
     float: left;
 }
-
-
 
 
 li a {
@@ -43,8 +43,4 @@ li a:hover {
 
 #subtitlerecepies {
     text-align: center;
-}
-
-article {
-    background-color:#D6D4D4;
 }
