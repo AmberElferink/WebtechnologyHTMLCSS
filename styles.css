@@ -1,13 +1,46 @@
-body
+h1
+{
+        font-family: "Calibri", serif;
+        color: #801D18;
+        background-color: transparent;
+        text-align: center;
+}
+h2{
+    color: #B02721;
+}
+
+h3{
+    text-align: center;
+    color: #801D18;
+}
+p
 {
     font-family: "Calibri", serif;
     color: black;
-    background-color: transparent;
+    font-size: 100%;
 }
+
+a{
+    color: #B02721;
+}
+
+#navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #B02721;
+}
+
+li {
+         float: left;
+     }
+
 
 li a {
     display: block;
     color: white;
+    font-size: large;
     text-align: center;
     padding: 16px;
     text-decoration: none;
@@ -17,19 +50,10 @@ li a:hover {
     background-color: #801D18;
 }
 
-#navigatie {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #B02721;
-}
-#navigatie li {
-    float: left;
-}
 
 
-
-#subtitlerecepies {
-    text-align: center;
+img.displayed{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
