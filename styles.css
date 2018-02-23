@@ -58,6 +58,14 @@ img.displayed{
     margin-right: auto
 }
 
+
+#ingredients{
+    list-style-type: square;
+}
+
+#method{
+    list-style-type: decimal;
+}
 table.paleRedRows {
     font-family: "Calibri", serif;
     border: 1px solid #FFFFFF;
@@ -98,4 +106,3 @@ table.paleRedRows thead th:first-child {
 table.paleRedRows tfoot td {
     font-size: 14px;
 }
-
