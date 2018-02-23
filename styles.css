@@ -58,3 +58,10 @@ img.displayed{
     margin-right: auto
 }
 
+#ingredients{
+    list-style-type: square;
+}
+
+#method{
+    list-style-type: decimal;
+}
