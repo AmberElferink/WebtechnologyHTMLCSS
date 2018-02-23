@@ -1,9 +1,24 @@
+
 body
 {
     font-family: "Calibri", serif;
     color: black;
     background-color: transparent;
 }
+h1
+{
+        color: #801D18;
+        text-align: center;
+}
+h2{
+        color: #B02721;
+}
+
+h3{
+    text-align: center;
+    color: #801D18;
+}
+
 
 li a {
     display: block;
@@ -17,19 +32,29 @@ li a:hover {
     background-color: #801D18;
 }
 
-#navigatie {
+a{
+    color: #B02721;
+
+}
+
+#navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #B02721;
 }
-#navigatie li {
-    float: left;
+
+
+
+#navigation li {
+         float: left;
+     }
+
+
+img.displayed{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
-
-
-#subtitlerecepies {
-    text-align: center;
-}
