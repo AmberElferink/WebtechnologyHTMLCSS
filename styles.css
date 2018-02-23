@@ -1,24 +1,22 @@
 
+body
+{
+    font-family: "Calibri", serif;
+    color: black;
+    background-color: transparent;
+}
 h1
 {
-        font-family: "Calibri", serif;
         color: #801D18;
-        background-color: transparent;
         text-align: center;
 }
 h2{
-    color: #B02721;
+        color: #B02721;
 }
 
 h3{
     text-align: center;
     color: #801D18;
-}
-p
-{
-    font-family: "Calibri", serif;
-    color: black;
-    background-color: transparent;
 }
 
 
@@ -39,7 +37,7 @@ a{
 
 }
 
-#navigatie {
+#navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -49,11 +47,9 @@ a{
 
 
 
-#navigatie {
+#navigation li {
          float: left;
      }
-
-
 
 
 img.displayed{
