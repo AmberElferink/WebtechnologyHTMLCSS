@@ -37,7 +37,7 @@ a{
 
 }
 
-#navigation {
+.navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ a{
 
 
 
-#navigation li {
+.navigation li {
          float: left;
      }
 
@@ -56,5 +56,46 @@ img.displayed{
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+table.paleRedRows {
+    font-family: "Calibri", serif;
+    border: 1px solid #FFFFFF;
+    width: 80%;
+    height: 200px;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 5px 10px 5px 10px;
+}
+table.paleRedRows td, table.paleRedRows th {
+    border: 1px solid #FFFFFF;
+    padding: 3px 2px;
+}
+table.paleRedRows tbody td {
+    font-size: 13px;
+}
+table.paleRedRows thead {
+    background: #B02721;
+    border-bottom: 5px solid #FFFFFF;
+}
+
+table.paleRedRows thead th {
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #FFFFFF;
+}
+
+table.paleRedRows tbody tr:nth-child(even){
+    background: #ffeaea;
+}
+
+table.paleRedRows thead th:first-child {
+    border-left: none;
+}
+
+table.paleRedRows tfoot td {
+    font-size: 14px;
 }
 
