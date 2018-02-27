@@ -60,6 +60,12 @@ img.displayed{
     width: 50%;
 }
 
+img.icon{
+    width:42px;
+    height:42px;
+    border:0;
+}
+
 video.displayed{
     display:block;
     margin-left: auto;
