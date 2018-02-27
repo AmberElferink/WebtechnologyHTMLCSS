@@ -56,8 +56,14 @@ img.displayed{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
 }
 
+video.displayed{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .ingredients{
     list-style-type: square;
