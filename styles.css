@@ -1,15 +1,16 @@
-
 body
 {
     font-family: "Calibri", serif;
     color: black;
     background-color: transparent;
 }
+
 h1
 {
         color: #801D18;
         text-align: center;
 }
+
 h2{
         color: #B02721;
 }
@@ -19,6 +20,10 @@ h3{
     color: #801D18;
 }
 
+a{
+    color: #B02721;
+
+}
 
 li a {
     display: block;
@@ -32,11 +37,6 @@ li a:hover {
     background-color: #801D18;
 }
 
-a{
-    color: #B02721;
-
-}
-
 .navigation {
     list-style-type: none;
     margin: 0;
@@ -45,27 +45,38 @@ a{
     background-color: #B02721;
 }
 
-
-
 .navigation li {
          float: left;
      }
 
+img {
+    width: 100%;
+}
 
 img.displayed{
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    width: 50%;
 }
 
+img.icon{
+    width:42px;
+    height:42px;
+    border:0;
+}
 
-#ingredients{
+video.displayed{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.ingredients{
     list-style-type: square;
 }
 
-#method{
-    list-style-type: decimal;
-}
 table.paleRedRows {
     font-family: "Calibri", serif;
     border: 1px solid #FFFFFF;
@@ -75,18 +86,16 @@ table.paleRedRows {
     border-collapse: collapse;
     padding: 5px 10px 5px 10px;
 }
+
 table.paleRedRows td, table.paleRedRows th {
     border: 1px solid #FFFFFF;
     padding: 3px 2px;
 }
-table.paleRedRows tbody td {
-    font-size: 13px;
-}
+
 table.paleRedRows thead {
     background: #B02721;
     border-bottom: 5px solid #FFFFFF;
 }
-
 table.paleRedRows thead th {
     font-size: 17px;
     font-weight: bold;
@@ -96,13 +105,11 @@ table.paleRedRows thead th {
 }
 
 table.paleRedRows tbody tr:nth-child(even){
-    background: #ffeaea;
+    background: #FFEAEA;
 }
 
-table.paleRedRows thead th:first-child {
-    border-left: none;
+table.paleRedRows tbody td {
+    font-size: 13px;
 }
 
-table.paleRedRows tfoot td {
-    font-size: 14px;
-}
+
