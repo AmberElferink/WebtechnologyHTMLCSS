@@ -112,38 +112,39 @@ table.paleRedRows tbody td {
     font-size: 13px;
 }
 
-/*https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp*/
-/* The side navigation menu */
-aside.sidenav {
-    float: right;
-    height: 100%;
-    width: 350px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
 
 .shiftformenu {
     margin-right: 350px; /* Same as the width of the sidenav */
     padding: 0 15px;
 }
 
+aside.sidenav {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: grey;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+
 .favorites {
     height: 40%;
     width: 340px;
     float: right;
-    background: grey;
+    background: white;
+    overflow-y: auto;
 }
 
 .shoppinglist {
     height: 40%;
     width: 340px;
     float: right;
-    background: grey;
+    background: white;
+    overflow-y: auto;
 }
 
 h1.sidenav {
