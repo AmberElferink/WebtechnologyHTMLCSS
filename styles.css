@@ -112,7 +112,6 @@ table.paleRedRows tbody td {
     font-size: 13px;
 }
 
-
 .shiftformenu {
     margin-right: 350px; /* Same as the width of the sidenav */
     padding: 0 15px;
@@ -153,5 +152,9 @@ h1.sidenav {
     color: white;
 }
 
+#plotIngredients {
+    width: 400px;
+    heigth: 300px;
+}
 
 
