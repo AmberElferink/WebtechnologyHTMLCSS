@@ -15,5 +15,5 @@ document.write("hi");
 
 
     $(document).ready(function () {
-        $.plot($("#flot-placeholder"), dataset, options);
+        $.plot($("#plotIngredients"), dataset, options);
     });
