@@ -152,7 +152,13 @@ h1.sidenav {
     color: white;
 }
 
-#plotIngredients {
-    width: 50%;
-    height: 300px;
+.plotIngredients {
+    width: 850px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
 }
+
+
+
+

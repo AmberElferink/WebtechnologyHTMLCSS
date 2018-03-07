@@ -12,6 +12,17 @@ var watermelondata = [
     [7, 6], //Sugars
     [8, 1] //Protein
 ];
+var fetadata = [
+    [0, 264], //Calories
+    [1, 21], //Total Fat
+    [2, 0.89], //Cholesterol
+    [3, 0.917], //Sodium
+    [4, 0.62], //Potassium
+    [5, 4],  //Carbohydrates
+    [6, 0], //Dietary Fiber
+    [7, 4], //Sugars
+    [8, 14] //Protein
+];
 var ticks = [
     [0, "Calories"], //Calories
     [1, "Total Fat"], //Total Fat
@@ -25,24 +36,36 @@ var ticks = [
 ];
 
 
+//LET OP: geeft rare zooi omdat 1-8 dubbel is.
+var alldata = [watermelondata, fetadata];
 
-var dataset = [{label: "watermelon g/100g",data: watermelondata}];
+var dataset = [{label: "watermelon g/100g",data: alldata }];
+
+var stack = 0,
+    bars = true,
+    lines = false,
+    steps = false;
 
 var options = {
     series: {
-        bars: { show: true }
+        stack: stack,
+        lines: {
+            show: lines,
+            fill: true,
+            steps: steps
+        },
+        bars: {show: true}
     },
-    bars: {
-        align: "center",
-        barWidth:0.5
-    },
+        bars: {
+            align: "center",
+            barWidth: 0.5
+        },
     xaxis: {
         axisLabel: "Nutrition",
         axisLabelUseCanvas: true,
         ticks: ticks,
         axisLabelPadding: 10
     },
-
     yaxis: {
         axisLabel: "g/ 100g",
         max: 100,
