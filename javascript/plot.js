@@ -68,21 +68,14 @@ $(function() {
 
     plotChart();
 
-    $(".stackControls button").click(function (e) {
-        e.preventDefault();
-        stack = $(this).text() == "With stacking" ? true : null;
-        plotChart();
+    if(document.getElementById('melon').checked) {
+        $("#Meloncool").show();
+    }
+    else {
+        $("#Meloncool").hide();
+    }
+
+    $('#melon').click(function() {
+        $("#Meloncool").toggle(this.checked);
     });
-
-    $(".graphControls button").click(function (e) {
-        e.preventDefault();
-        bars = $(this).text().indexOf("Bars") != -1;
-        lines = $(this).text().indexOf("Lines") != -1;
-        steps = $(this).text().indexOf("steps") != -1;
-        plotChart();
-    });
-
-    // Add the Flot version string to the footer
-
-    $("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
 });
