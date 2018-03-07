@@ -153,12 +153,6 @@ h1.sidenav {
 }
 
 #plotIngredients {
-    width: 400px;
+    width: 50%;
     height: 300px;
 }
-
-#flot-placeholder{
-    width:350px;
-    height:300px;
-}
-
