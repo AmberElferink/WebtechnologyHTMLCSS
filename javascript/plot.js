@@ -11,7 +11,7 @@ $(function() {
         [8, 1] //Protein
     ];
 
-    var fetadata = [    [0, 264], //Calories
+    var fetadata = [[0, 264], //Calories
         [1, 21], //Total Fat
         [2, 0.89], //Cholesterol
         [3, 0.917], //Sodium
@@ -34,8 +34,8 @@ $(function() {
         [8, "Proteins"] //Protein
     ];
 
-    var alldata = [watermelondata, fetadata];
-
+    var alldata = [fetadata];
+   // alldata = alldata.concat([watermelondata]);
     var options1 = {
         series: {
             stack: 0,
@@ -62,14 +62,19 @@ $(function() {
             min: 0
         }
     };
+
     function plotChart() {
+
         $.plot(".plotIngredients", alldata, options1);
     }
 
     plotChart();
-
-    if(document.getElementById('melon').checked) {
+    console.log(alldata);
+    if (document.getElementById('melon').checked) {
         $("#Meloncool").show();
+        alldata = alldata.concat([watermelondata]);
+        console.log(alldata); //doesn't log, why not?
+        plotChart();
     }
     else {
         $("#Meloncool").hide();
@@ -77,5 +82,6 @@ $(function() {
 
     $('#melon').click(function() {
         $("#Meloncool").toggle(this.checked);
+        alldata = alldata.concat([watermelondata]);
     });
 });
