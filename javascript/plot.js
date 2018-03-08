@@ -1,5 +1,5 @@
 $(function() {
-
+//http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
     var watermelondata = [[0, 30], //Calories
         [1, 0], //Total Fat
         [2, 0], //Cholesterol
@@ -60,28 +60,100 @@ $(function() {
             axisLabel: "g/ 100g",
             max: 100,
             min: 0
+        },
+        grid: {
+            clickable: true,
+            hoverable: true,
+            autoHighlight: true
         }
+
     };
 
-    function plotChart() {
+    var hoverTip;
 
-        $.plot(".plotIngredients", alldata, options1);
+    function toolTipHTML( stat, series) {
+        var html = '';
+        html += '<div class = "tooltip">';
+        html += '<div>';
+
+        if ( series )
+            html += '<span class="series">' + series + '</span>';
+
+        html += '<span class="stats">' + stat + '</span>';
+        html += '</div>';
+        html += '</div>';
+
+        return html;
     }
 
-    plotChart();
-    console.log(alldata);
-    if (document.getElementById('melon').checked) {
-        $("#Meloncool").show();
-        alldata = alldata.concat([watermelondata]);
-        console.log(alldata); //doesn't log, why not?
+    function bindEvents (){
+        $('.plotIngredients').on('plothover', function (event, pos, item) {
+            var offset = { height: 0, width: 0};
+            var display;
+
+            if (item) {
+                display = item.series.data[item.dataIndex][1];
+
+                hoverTip = $(toolTipHTML(display, item.series.label));
+                $('.plotIngredients').append(hoverTip);
+
+                offset.height = hoverTip.outerHeight();
+                offset.width = hoverTip.outerWidth();
+
+                hoverTip.offset({left: item.pageX - offset.width / 2, top: item.pageY - offset.height - 15});
+            }
+
+        });
+    }
+
+    //TO DO
+    $(".plotIngredients").bind("plotclick", function (event, pos, item) {
+    if (item) {
+        console.log("item no." + item.dataIndex + " in " + item.series.label + " clicked");
+    }
+    });
+
+
+
+
+    $(document).ready(function () {
         plotChart();
+    });
+
+    function plotChart() {
+        var plot;
+        plot = $.plot(".plotIngredients", alldata, options1);
+        bindEvents(plot);
     }
-    else {
-        $("#Meloncool").hide();
-    }
+
+
+
+
+    $("#Meloncool").hide();
 
     $('#melon').click(function() {
-        $("#Meloncool").toggle(this.checked);
-        alldata = alldata.concat([watermelondata]);
+        if(document.getElementById('melon').checked)
+        {
+            addMelon();
+        }
+        else
+        {
+            removeMelon();
+        }
     });
+
+    function addMelon() {
+        $("#Meloncool").show();
+        alldata = alldata.concat([watermelondata]);
+        plotChart();
+    }
+
+    function removeMelon() {
+        $("#Meloncool").hide();
+            const index = alldata.indexOf(watermelondata);
+            alldata.splice(index, 1);
+            plotChart();
+    }
+
+
 });
