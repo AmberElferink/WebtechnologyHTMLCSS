@@ -1,5 +1,6 @@
 $(function() {
 //http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
+
     var watermelondata = [[0, 30], //Calories
         [1, 0], //Total Fat
         [2, 0], //Cholesterol
@@ -32,6 +33,11 @@ $(function() {
         [6, "Dietary Fiber"], //Dietary Fiber
         [7, "Sugars"], //Sugars
         [8, "Proteins"] //Protein
+    ];
+
+    var checkboxData = [
+        ['melon', watermelondata],
+        ['feta', fetadata]
     ];
 
     var alldata = [fetadata];
@@ -126,33 +132,33 @@ $(function() {
         bindEvents(plot);
     }
 
-
+    console.log(document.getElementsByClassName(checkboxData.length));
 
 
     $("#Meloncool").hide();
 
-    $('#melon').click(function() {
-        if(document.getElementById('melon').checked)
-        {
-            addMelon();
-        }
-        else
-        {
-            removeMelon();
+    $($('input[type=checkbox]')).click(function() {
+        for(var i = 0; i < checkboxData.length; i++) {
+            if (document.getElementsByClassName(checkboxData[0][0])[0].checked) {
+                addIngredient(watermelondata);
+            }
+            else {
+                removeIngredient(watermelondata);
+            }
         }
     });
 
-    function addMelon() {
+    function addIngredient(data) {
         $("#Meloncool").show();
-        alldata = alldata.concat([watermelondata]);
+        alldata = alldata.concat([data]);
         plotChart();
     }
 
-    function removeMelon() {
+    function removeIngredient(data) {
         $("#Meloncool").hide();
-            const index = alldata.indexOf(watermelondata);
-            alldata.splice(index, 1);
-            plotChart();
+        const index = alldata.indexOf(data);
+        alldata.splice(index, 1);
+        plotChart();
     }
 
 
