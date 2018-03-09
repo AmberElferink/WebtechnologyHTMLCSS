@@ -40,8 +40,8 @@ $(function() {
         ['feta', fetadata]
     ];
 
-    var alldata = [fetadata];
-   // alldata = alldata.concat([watermelondata]);
+    var alldata = [];
+
     var options1 = {
         series: {
             stack: 0,
@@ -91,7 +91,7 @@ $(function() {
 
         return html;
     }
-
+//TO DO: hover weghalen als geen tijd meer.
     function bindEvents (){
         $('.plotIngredients').on('plothover', function (event, pos, item) {
             var offset = { height: 0, width: 0};
@@ -132,18 +132,23 @@ $(function() {
         bindEvents(plot);
     }
 
-    console.log(document.getElementsByClassName(checkboxData.length));
+    console.log(document.getElementsByClassName(checkboxData[1][0]));
 
 
     $("#Meloncool").hide();
 
     $($('input[type=checkbox]')).click(function() {
         for(var i = 0; i < checkboxData.length; i++) {
-            if (document.getElementsByClassName(checkboxData[0][0])[0].checked) {
-                addIngredient(watermelondata);
+            if (document.getElementsByClassName(checkboxData[i][0])[0].checked) {
+                if(alldata.indexOf(checkboxData[i][1]) === -1) {
+                    addIngredient(checkboxData[i][1]);
+                }
             }
             else {
-                removeIngredient(watermelondata);
+                //if the object exists in the array (indexof returns -1 if the object is not found)
+                if(alldata.indexOf(checkboxData[i][1]) != -1) {
+                    removeIngredient(checkboxData[i][1]);
+                }
             }
         }
     });
