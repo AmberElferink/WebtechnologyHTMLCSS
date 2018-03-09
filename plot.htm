@@ -10,16 +10,18 @@
         <!--<link href="libraries/flot/examples/examples.css" rel="stylesheet" type="text/css">-->
         <script type="text/javascript" src="libraries/flot/excanvas.min.js"></script>
         <script type="text/javascript" src="libraries/flot/jquery.js"></script>
+        <script type="text/javascript" src="libraries/flot/jquery.min.js"></script>
         <script type="text/javascript" src="libraries/flot/jquery.flot.js"></script>
         <script type="text/javascript" src="libraries/flot/jquery.flot.axislabels.js"></script>
         <script type="text/javascript" src="libraries/flot/jquery.flot.stack.js"></script>
+
+
         <script type="text/javascript" src="javascript/plot.js"></script>
     </head>
     <body>
         <header>
             <img src="images/website-header.png" alt="layout of ingedrients">
         </header>
-
         <ul class="navigation">
             <li><a href="index.htm">Home</a></li>
             <li><a href="starters.htm">Starters</a></li>
@@ -32,18 +34,21 @@
         <h1>Recipe nutrients</h1>
         <section>
 
-            <figure class="plotIngredients"></figure>
+            <figure class="plotIngredients">
 
 
+            </figure>
+
+            <p><a href="http://www.myfitnesspal.com/food/calories/157795851">Data from myfitnesspal.com</a> </p>
             <p class="stackControls">
-                <button>With stacking</button>
-                <button>Without stacking</button>
+            <br>
             </p>
 
+            <p id="Meloncool">MELONS ARE COOL</p>
+
             <p class="graphControls">
-                <button>Bars</button>
-                <button>Lines</button>
-                <button>Lines with steps</button>
+                Melon <input type="checkbox" title="Add watermelon to graph" class="melon">
+                Feta  <input type="checkbox" title="Add feta to graph" class="feta">
             </p>
 
         </section>

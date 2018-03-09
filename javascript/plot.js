@@ -1,4 +1,5 @@
 $(function() {
+//http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
 
  //data for the watermelon and feta starter recipe
     var watermelondata = [
@@ -195,7 +196,12 @@ $(function() {
         [8, "Proteins"] //Protein
     ];
 
-    var alldata = [watermelondata, fetadata];
+    var checkboxData = [
+        ['melon', watermelondata],
+        ['feta', fetadata]
+    ];
+
+    var alldata = [];
 
     var options1 = {
         series: {
@@ -221,29 +227,105 @@ $(function() {
             axisLabel: "g/ 100g",
             max: 100,
             min: 0
+        },
+        grid: {
+            clickable: true,
+            hoverable: true,
+            autoHighlight: true
         }
+
     };
-    function plotChart() {
-        $.plot(".plotIngredients", alldata, options1);
+
+    var hoverTip;
+
+    function toolTipHTML( stat, series) {
+        var html = '';
+        html += '<div class = "tooltip">';
+        html += '<div>';
+
+        if ( series )
+            html += '<span class="series">' + series + '</span>';
+
+        html += '<span class="stats">' + stat + '</span>';
+        html += '</div>';
+        html += '</div>';
+
+        return html;
+    }
+//TO DO: hover weghalen als geen tijd meer.
+    function bindEvents (){
+        $('.plotIngredients').on('plothover', function (event, pos, item) {
+            var offset = { height: 0, width: 0};
+            var display;
+
+            if (item) {
+                display = item.series.data[item.dataIndex][1];
+
+                hoverTip = $(toolTipHTML(display, item.series.label));
+                $('.plotIngredients').append(hoverTip);
+
+                offset.height = hoverTip.outerHeight();
+                offset.width = hoverTip.outerWidth();
+
+                hoverTip.offset({left: item.pageX - offset.width / 2, top: item.pageY - offset.height - 15});
+            }
+
+        });
     }
 
-    plotChart();
+    //TO DO
+    $(".plotIngredients").bind("plotclick", function (event, pos, item) {
+    if (item) {
+        console.log("item no." + item.dataIndex + " in " + item.series.label + " clicked");
+    }
+    });
 
-    $(".stackControls button").click(function (e) {
-        e.preventDefault();
-        stack = $(this).text() == "With stacking" ? true : null;
+
+
+
+    $(document).ready(function () {
         plotChart();
     });
 
-    $(".graphControls button").click(function (e) {
-        e.preventDefault();
-        bars = $(this).text().indexOf("Bars") != -1;
-        lines = $(this).text().indexOf("Lines") != -1;
-        steps = $(this).text().indexOf("steps") != -1;
-        plotChart();
+    function plotChart() {
+        var plot;
+        plot = $.plot(".plotIngredients", alldata, options1);
+        bindEvents(plot);
+    }
+
+    console.log(document.getElementsByClassName(checkboxData[1][0]));
+
+
+    $("#Meloncool").hide();
+
+    $($('input[type=checkbox]')).click(function() {
+        for(var i = 0; i < checkboxData.length; i++) {
+            if (document.getElementsByClassName(checkboxData[i][0])[0].checked) {
+                if(alldata.indexOf(checkboxData[i][1]) === -1) {
+                    addIngredient(checkboxData[i][1]);
+                }
+            }
+            else {
+                //if the object exists in the array (indexof returns -1 if the object is not found)
+                if(alldata.indexOf(checkboxData[i][1]) != -1) {
+                    removeIngredient(checkboxData[i][1]);
+                }
+            }
+        }
     });
 
-    // Add the Flot version string to the footer
+    function addIngredient(data) {
+        $("#Meloncool").show();
+        alldata = alldata.concat([data]);
+        plotChart();
+    }
 
-    $("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+    function removeIngredient(data) {
+        $("#Meloncool").hide();
+        const index = alldata.indexOf(data);
+        alldata.splice(index, 1);
+        plotChart();
+    }
+
+
 });
