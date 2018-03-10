@@ -214,7 +214,7 @@ $(function() {
         ['goldensugar', goldensugardata]
     ];
 
-    var alldata = [];
+    var alldata = [[,]];
 
     var options1 = {
         series: {
