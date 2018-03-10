@@ -146,7 +146,7 @@ aside.sidenav {
 }
 
 h1.sidenav {
-    margin: 0px;
+    margin: 0;
     padding: 15px;
     background-color: #B02721;
     color: white;
@@ -159,6 +159,19 @@ h1.sidenav {
     line-height: 1.2em;
 }
 
+.plotCalories {
+    width: 100px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.alldataplot {
+    width: 850px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
 
 
 

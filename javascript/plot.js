@@ -1,7 +1,7 @@
 $(function() {
 //http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
 
- //data for the watermelon and feta starter recipe
+    //data for the watermelon and feta starter recipe
     var watermelondata = [
         [0, 30], //Calories
         [1, 0], //Total Fat
@@ -26,7 +26,7 @@ $(function() {
         [8, 14] //Protein
     ];
 
-    var redoniondata = [
+    var redOniondata = [
         [0, 37], //Calories
         [1, 0], //Total Fat
         [2, 0], //Cholesterol
@@ -148,7 +148,7 @@ $(function() {
         [8, 1] //Protein
     ];
 
-    var douclecreamdata = [
+    var doublecreamdata = [
         [0, 290], //Calories
         [1, 30], //Total Fat
         [2, 0], //Cholesterol
@@ -198,7 +198,20 @@ $(function() {
 
     var checkboxData = [
         ['melon', watermelondata],
-        ['feta', fetadata]
+        ['feta', fetadata],
+        ['redOnion', redOniondata],
+        ['mint', mintdata],
+        ['oliveoil', oliveoildata],
+        ['whiteonion', whiteoniondata],
+        ['garlic', garlicdata],
+        ['redpepper', redpepperdata],
+        ['yellowpepper', yellowpepperdata],
+        ['sourcreme', sourcremedata],
+        ['chocolate', chocolatedata],
+        ['cherries', cherriesdata],
+        ['doublecream', doublecreamdata],
+        ['eggs', eggsdata],
+        ['goldensugar', goldensugardata]
     ];
 
     var alldata = [];
@@ -275,9 +288,9 @@ $(function() {
 
     //TO DO
     $(".plotIngredients").bind("plotclick", function (event, pos, item) {
-    if (item) {
-        console.log("item no." + item.dataIndex + " in " + item.series.label + " clicked");
-    }
+        if (item) {
+            console.log("item no." + item.dataIndex + " in " + item.series.label + " clicked");
+        }
     });
 
 
