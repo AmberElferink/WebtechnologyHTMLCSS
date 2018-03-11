@@ -152,26 +152,25 @@ h1.sidenav {
     color: white;
 }
 
-.plotIngredients {
-    width: 850px;
+.combinedPlots {
+    width: 950px;
     height: 450px;
     font-size: 14px;
     line-height: 1.2em;
 }
 
 .plotCalories {
+    float: left;
     width: 100px;
     height: 450px;
-    font-size: 14px;
-    line-height: 1.2em;
 }
 
-.alldataplot {
+.plotIngredients {
+    position: absolute;
+    left: 150px;
     width: 850px;
     height: 450px;
     font-size: 14px;
     line-height: 1.2em;
 }
-
-
 

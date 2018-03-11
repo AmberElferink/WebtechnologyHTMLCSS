@@ -271,8 +271,8 @@ $(function() {
         xaxis: {
             axisLabel: "Calories",
             axisLabelUseCanvas: true,
-            ticks: ticks,
-            axisLabelPadding: 10
+            ticks: [],
+            axisLabelPadding: 23
         },
         yaxis: {
             axisLabel: "kcal/100g",
