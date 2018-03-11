@@ -1,6 +1,7 @@
 $(function() {
 //http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
 
+//DATA
     //data for the watermelon and feta starter recipe
     var watermelondata = [
         [0, 30], //Calories
@@ -197,6 +198,7 @@ $(function() {
     ];
 
     var checkboxData = [
+        //giving names instead of numbers at the bottom
         ['melon', watermelondata],
         ['feta', fetadata],
         ['redOnion', redOniondata],
@@ -215,6 +217,9 @@ $(function() {
     ];
 
     var alldata = [[,]];
+    var caloriedata = [[,]];
+    var nutrientdata = [[,]];
+
 
     var options1 = {
         series: {
@@ -248,6 +253,105 @@ $(function() {
         }
 
     };
+
+    var options2 = {
+        series: {
+            stack: 0,
+            lines: {
+                show: false,
+                fill: true,
+                steps: false
+            },
+            bars: {show: true}
+        },
+        bars: {
+            align: "center",
+            barWidth: 0.5
+        },
+        xaxis: {
+            axisLabel: "Calories",
+            axisLabelUseCanvas: true,
+            ticks: ticks,
+            axisLabelPadding: 10
+        },
+        yaxis: {
+            axisLabel: "kcal/100g",
+            min: 0
+        },
+        grid: {
+            clickable: true,
+            hoverable: true,
+            autoHighlight: true
+        }
+
+    };
+
+//PLOT AND CHECKBOXES
+    $(document).ready(function () {
+        plotChart();
+    });
+
+    function plotChart() {
+        var plotIngredients;
+        plotIngredients = $.plot(".plotIngredients", nutrientdata, options1);
+        $.plot(".plotCalories", caloriedata, options2);
+        bindEvents(plotIngredients);
+    }
+
+
+    $($('input[type=checkbox]')).click(function() {
+    checkChecked();
+    });
+
+    function checkChecked() {
+        //for the class, which data is coupled to it (in checkboxData)
+        for(var i = 0; i < checkboxData.length; i++) {
+            //it checks for all existing classes in checkboxdata, if the box is checked
+            //(only one box per class currently supported, the first box with [0]. Extra boxes to be added later).
+            if (document.getElementsByClassName(checkboxData[i][0])[0].checked) {
+                //if the object does not exists in the array (indexof returns -1 if the object is not found)
+                if(alldata.indexOf(checkboxData[i][1]) === -1) {
+                    addIngredient(checkboxData[i][1]);
+                }
+            }
+            else {
+                //if the object exists in the array (indexof returns -1 if the object is not found)
+                if(alldata.indexOf(checkboxData[i][1]) != -1) {
+                    removeIngredient(checkboxData[i][1]);
+                }
+            }
+        }
+    }
+
+    //adds data to the plot
+    function addIngredient(data) {
+        alldata = alldata.concat([data]);
+        caloriedata = caloriedata.concat([[data[0]]]);
+        nutrientdata = nutrientdata.concat([data.slice(1, data.length)]);
+        plotChart();
+        console.log("new log");
+        console.log(alldata);
+        console.log(caloriedata);
+        console.log(nutrientdata);
+    }
+
+    //removes data from the plot
+    function removeIngredient(data) {
+        const index = alldata.indexOf(data);
+        alldata.splice(index, 1);
+        caloriedata.splice(index, 1);
+        nutrientdata.splice(index, 1);
+        plotChart();
+    }
+
+
+
+
+
+
+
+
+
 
     var hoverTip;
 
@@ -292,53 +396,6 @@ $(function() {
             console.log("item no." + item.dataIndex + " in " + item.series.label + " clicked");
         }
     });
-
-
-
-
-    $(document).ready(function () {
-        plotChart();
-    });
-
-    function plotChart() {
-        var plot;
-        plot = $.plot(".plotIngredients", alldata, options1);
-        bindEvents(plot);
-    }
-
-    console.log(document.getElementsByClassName(checkboxData[1][0]));
-
-
-    $("#Meloncool").hide();
-
-    $($('input[type=checkbox]')).click(function() {
-        for(var i = 0; i < checkboxData.length; i++) {
-            if (document.getElementsByClassName(checkboxData[i][0])[0].checked) {
-                if(alldata.indexOf(checkboxData[i][1]) === -1) {
-                    addIngredient(checkboxData[i][1]);
-                }
-            }
-            else {
-                //if the object exists in the array (indexof returns -1 if the object is not found)
-                if(alldata.indexOf(checkboxData[i][1]) != -1) {
-                    removeIngredient(checkboxData[i][1]);
-                }
-            }
-        }
-    });
-
-    function addIngredient(data) {
-        $("#Meloncool").show();
-        alldata = alldata.concat([data]);
-        plotChart();
-    }
-
-    function removeIngredient(data) {
-        $("#Meloncool").hide();
-        const index = alldata.indexOf(data);
-        alldata.splice(index, 1);
-        plotChart();
-    }
 
 
 });
