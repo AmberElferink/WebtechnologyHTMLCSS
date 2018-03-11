@@ -288,7 +288,7 @@ $(function() {
 
 //PLOT AND CHECKBOXES
     $(document).ready(function () {
-        plotChart();
+        checkChecked();
     });
 
     function plotChart() {
