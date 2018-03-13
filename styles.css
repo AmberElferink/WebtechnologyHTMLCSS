@@ -174,26 +174,23 @@ h1.sidenav {
     width: auto;
 }
 .context-menu {
-    display: none;
-    z-index: 1000;
+    width: 200px;
+    height: auto;
+    box-shadow: 0 0 20px 0 #ccc;
     position: absolute;
-    overflow: hidden;
-    border: 1px solid #CCC;
-    white-space: nowrap;
-    font-family: sans-serif;
-    background: #FFF;
-    color: #333;
-    border-radius: 5px;
-    padding: 0;
+    display: none;
+    background: white;
+    list-style: none;
+    padding: 5px 0px 5px 0px;
+
+
 }
 
-
 .context-menu li{
-    padding: 8px 12px;
+    padding: 10px 5px 10px 5px;
+    border-left: 4px solid transparent;
     cursor: pointer;
-    list-style-type: none;
-    transition: all .3s ease;
-    user-select: none;
+
 }
 .plotCalories {
     float: left;
@@ -212,6 +209,6 @@ h1.sidenav {
 }
 
 .context-menu li:hover{
-    background: pink;
-    border-left: 4px solid #666;
+    background: #B02721;
+    color: white;
 }
