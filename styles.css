@@ -161,14 +161,15 @@ h1.sidenav {
 
 .plotCalories {
     float: left;
-    width: 100px;
+    width: 10%;
     height: 450px;
 }
 
 .plotIngredients {
     position: absolute;
     left: 150px;
-    width: 850px;
+    width: 70%;
+    min-width: 500px;
     height: 450px;
     font-size: 14px;
     line-height: 1.2em;
