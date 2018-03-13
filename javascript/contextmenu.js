@@ -11,16 +11,16 @@
 //}
 
 
-
+/*
 $(document).bind("mousedown",function(e){
-    if(!$(e.target).parents(".context-menu").lenght>0){
+    if(!$(e.target).parents(".context-menu").length>0){
         $(".context-menu").hide(100);
     }
 });
 
 
 
-window.onclick = hideContextMenu;
+window.onclick = onClickHandler(event);
 
 var menu = document.getElementById('contextMenu');
 
@@ -28,6 +28,7 @@ var isMenuShown = false;
 var selectedElement;
 
 function showContextMenu(e) {
+    e.preventDefault();
     $(".context-menu").finish().toggle(100) .
     css({
         top:event.pageY+"px",
@@ -38,7 +39,7 @@ function showContextMenu(e) {
     contextMenu.style.left = e.pageX + 'px';
     contextMenu.style.top = e.pageY + 'px';
     return false;*/
-
+/*
 }
 
 function toggleContextMenu(event, clickCoords) {
@@ -57,12 +58,14 @@ function toggleContextMenu(event, clickCoords) {
 }
 
 function onClickHandler(event) {
-//TODO: check if right clicked and is mouse event and the
+
 //click is NOT on the context menu itself.
-  if (...) {
+  if (event.button===2) {
      event.preventDefault();
-         //TODO: get cursor coordinates
-       var clickCoords = ...;
+
+
+       var x = event.clientX;
+      var y = event.clientY;
 
        // TODO: toggle context menu with location
        toggleContextMenu(event, clickCoords)
@@ -78,7 +81,7 @@ function onClickHandler(event) {
 }
 
 function hideContextMenu(){
-  contextMenu.style.display = 'none';
+  menu.style.display = 'none';
 }
 
 
@@ -102,3 +105,49 @@ function functionColorBlue() {
     document.getElementByCLassName("text".style.color = "blue";
 }*/
 
+// JAVASCRIPT (jQuery)
+
+// Trigger action when the contexmenu is about to be shown
+$(document).bind(".context-menu", function (event) {
+
+    // Avoid the real one
+    event.preventDefault();
+
+    // Show contextmenu
+    $(".context-menu").finish().toggle(100).
+
+    // In the right position (the mouse)
+    css({
+        top: event.pageY + "px",
+        left: event.pageX + "px"
+    });
+});
+
+
+// If the document is clicked somewhere
+$(document).bind("mousedown", function (e) {
+
+    // If the clicked element is not the menu
+    if (!$(e.target).parents(".context-menu").length > 0) {
+
+        // Hide it
+        $(".context-menu").hide(100);
+    }
+});
+
+
+// If the menu element is clicked
+$(".context-menu li").click(function(){
+
+    // This is the triggered action name
+    switch($(this).attr("data-action")) {
+
+        // A case for each action. Your actions here
+        case "bold": alert("first"); break;
+        case "italic": alert("second"); break;
+        case "pink": alert("third"); break;
+    }
+
+    // Hide it AFTER the action was triggered
+    $(".context-menu").hide(100);
+});
