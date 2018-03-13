@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body
 {
     font-family: "Calibri", serif;
@@ -5,6 +9,10 @@ body
     background-color: transparent;
 }
 
+*{
+    margin:0;
+    padding:0;
+}
 h1
 {
         color: #801D18;
@@ -125,13 +133,12 @@ aside.sidenav {
     right: 0;
     background-color: grey;
     overflow-x: hidden;
-    padding-top: 20px;
 }
 
 
 
 .favorites {
-    height: 40%;
+    height: 50%;
     width: 340px;
     float: right;
     background: white;
@@ -139,7 +146,7 @@ aside.sidenav {
 }
 
 .shoppinglist {
-    height: 40%;
+    height: 50%;
     width: 340px;
     float: right;
     background: white;
@@ -147,18 +154,64 @@ aside.sidenav {
 }
 
 h1.sidenav {
-    padding: 15px 0 15px 0;
+    margin: 0;
+    padding: 15px;
     background-color: #B02721;
     color: white;
 }
 
-.plotIngredients {
-    width: 850px;
+.combinedPlots {
+    width: 950px;
     height: 450px;
     font-size: 14px;
     line-height: 1.2em;
 }
 
 
+.container{
+    background: pink;
+    height: 100px;
+    width: auto;
+}
+.context-menu {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 5px;
+    padding: 0;
+}
 
 
+.context-menu li{
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style-type: none;
+    transition: all .3s ease;
+    user-select: none;
+}
+.plotCalories {
+    float: left;
+    width: 10%;
+    height: 450px;
+}
+
+.plotIngredients {
+    position: absolute;
+    left: 150px;
+    width: 70%;
+    min-width: 500px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.context-menu li:hover{
+    background: pink;
+    border-left: 4px solid #666;
+}
