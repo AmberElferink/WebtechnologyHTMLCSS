@@ -154,18 +154,19 @@ aside.sidenav {
 }
 
 h1.sidenav {
-    margin: 0px;
+    margin: 0;
     padding: 15px;
     background-color: #B02721;
     color: white;
 }
 
-.plotIngredients {
-    width: 850px;
+.combinedPlots {
+    width: 950px;
     height: 450px;
     font-size: 14px;
     line-height: 1.2em;
 }
+
 
 .container{
     background: pink;
@@ -193,6 +194,21 @@ h1.sidenav {
     list-style-type: none;
     transition: all .3s ease;
     user-select: none;
+}
+.plotCalories {
+    float: left;
+    width: 10%;
+    height: 450px;
+}
+
+.plotIngredients {
+    position: absolute;
+    left: 150px;
+    width: 70%;
+    min-width: 500px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
 }
 
 .context-menu li:hover{
