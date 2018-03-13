@@ -216,13 +216,10 @@ $(function() {
         ['goldensugar', goldensugardata]
     ];
 
-    var recipes =['melonsalad', 'peppersoup', 'brownies'];
-
     var alldata = [[,]];
     var caloriedata = [[,]];
     var nutrientdata = [[,]];
 
-    var maxHeight = 100*nutrientdata.length;
 
     var options1 = {
         series: {
@@ -246,7 +243,7 @@ $(function() {
         },
         yaxis: {
             axisLabel: "g/ 100g",
-            max: maxHeight,
+            max: 100,
             min: 0
         },
         grid: {
@@ -295,7 +292,6 @@ $(function() {
     });
 
     function plotChart() {
-        maxHeight = nutrientdata.length*100;
         var plotIngredients;
         plotIngredients = $.plot(".plotIngredients", nutrientdata, options1);
         $.plot(".plotCalories", caloriedata, options2);
@@ -304,11 +300,10 @@ $(function() {
 
 
     $($('input[type=checkbox]')).click(function() {
-    checkChecked();
+        checkChecked();
     });
 
     function checkChecked() {
-
         //for the class, which data is coupled to it (in checkboxData)
         for(var i = 0; i < checkboxData.length; i++) {
             //it checks for all existing classes in checkboxdata, if the box is checked
@@ -326,29 +321,7 @@ $(function() {
                 }
             }
         }
-
-
-
-        for(var i = 0; i < recipes.length; i++) {
-            var recipeClass = "." + recipes[i];
-            var recipeId = "#" + recipes[i];
-            $(recipeId).toggle(
-                function () {
-                    $(recipeClass).prop("checked", true);
-                    checkChecked();
-                },
-                function () {
-                    $(recipeClass).prop("checked", false);
-                    checkChecked();
-                }
-            );
-        }
     }
-
-
-
-
-
 
     //adds data to the plot
     function addIngredient(data) {
