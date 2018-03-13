@@ -216,7 +216,7 @@ $(function() {
         ['goldensugar', goldensugardata]
     ];
 
-    var recipes =['melonsalad'];
+    var recipes =['melonsalad', 'peppersoup', 'brownies'];
 
     var alldata = [[,]];
     var caloriedata = [[,]];
@@ -327,20 +327,24 @@ $(function() {
             }
         }
     }
-for(var i = 0; i < recipes.length; i++) {
-        var recipeClass = "."+recipes[i];
-        var recipeId = "#"+recipes[i];
-    $(recipeId).toggle(
-        function () {
-            $(recipeClass).prop("checked", true);
-            checkChecked();
-        },
-        function () {
-            $(recipeClass).prop("checked", false);
-            checkChecked();
-        }
-    );
-}
+
+$('.recipecheck').toggle(
+    function () {
+    for(var i = 0; i < recipes.length; i++) {
+        var recipeClass = "." + recipes[i];
+        var recipeId = "#" + recipes[i];
+        $(recipeId).toggle(
+            function () {
+                $(recipeClass).prop("checked", true);
+                checkChecked();
+            },
+            function () {
+                $(recipeClass).prop("checked", false);
+                checkChecked();
+            }
+        );
+    }
+});
 
 
     //adds data to the plot
