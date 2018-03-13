@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body
 {
     font-family: "Calibri", serif;
@@ -5,6 +9,10 @@ body
     background-color: transparent;
 }
 
+*{
+    margin:0;
+    padding:0;
+}
 h1
 {
         color: #801D18;
@@ -159,6 +167,32 @@ h1.sidenav {
     line-height: 1.2em;
 }
 
+.container{
+    background: pink;
+    height: 100px;
+    width: auto;
+}
+.context-menu {
+    width: 200px;
+    height: auto;
+    box-shadow: 0 0 20px 0 #ccc;
+    position: absolute;
+    display: none;
 
+}
 
+.context-menu ul {
+    list-style: none;
+    padding: 5px 0px 5px 0px;
+}
 
+.context-menu ul li{
+    padding: 10px 5px 10px 5px;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+}
+
+.context-menu ul li:hover{
+    background: pink;
+    border-left: 4px solid #666;
+}
