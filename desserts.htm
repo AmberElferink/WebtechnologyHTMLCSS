@@ -7,10 +7,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+
+    <script type=text/javascript src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type=text/javascript src="javascript/contextmenu.js"></script>
 </head>
 
 
-<body>
+<body id="text">
 
     <header>
         <img src="images/website-header.png" alt="layout of ingedrients">
@@ -23,6 +26,14 @@
         <li><a href="desserts.htm">Desserts</a></li>
         <li><a href="plot.htm">Nutrition Values</a></li>
         <li><a href="about.htm">About</a></li>
+    </ul>
+
+    <ul class="context-menu">
+        <li data-action="bold" onclick="functionBold()">Bold</li>
+        <li data-action="italic" onclick="functionItalic()">Italic</li>
+        <li data-action="pink" onclick="functionColorPink()">Text Color: Pink</li>
+        <li data-action="green" onclick="functionColorGreen()">Text Color: Green</li>
+        <li data-action="blue" onclick="functionColorBlue()">Text Color: Blue</li>
     </ul>
 
     <h3>Jump to: <a href="#dessert1">Chocolate Mouse</a>, <a href="#dessert2">Blackberry Fool</a>, <a href="#dessert3">Double Chocolate Brownies </a></h3>
