@@ -7,6 +7,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+
+    <script type=text/javascript src="libraries/flot/jquery.min.js"></script>
+    <script src="javascript/contextmenu.js"></script>
 </head>
 
 
@@ -25,9 +28,23 @@
         <li><a href="about.htm">About</a></li>
     </ul>
 
+    <!--- <div class="container" oncontextmenu="showContextMenu();"></div>
+    <div id="contextMenu" class="context-menu"> -->
+    <ul class="context-menu">
+        <li data-action="bold">Bold</li>
+        <li data-action="italic">Italic</li>
+        <li data-action="pink">Text Color: Pink</li>
+        <li data-action="green">Text Color: Green</li>
+        <li data-action="blue">Text Color: Blue</li>
+    </ul>
+
+
+
+    <!--- <button type="button" onclick="myFunction()">Text color: Pink</button> --->
+
     <h1>What are you eating tonight?</h1>
 
-    <p>Have a look around! You will be able to find many quick to prepare and very tasty meals.
+    <p id="paragraaf">Have a look around! You will be able to find many quick to prepare and very tasty meals.
     Impress your friends or parents maybe with your cooking skills, without a sweat of work.
     Do you fancy a soup or rather have pasta? It's all there!</p>
 

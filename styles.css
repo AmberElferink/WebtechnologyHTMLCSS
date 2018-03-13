@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 body
 {
     font-family: "Calibri", serif;
@@ -5,6 +9,10 @@ body
     background-color: transparent;
 }
 
+*{
+    margin:0;
+    padding:0;
+}
 h1
 {
         color: #801D18;
@@ -159,6 +167,34 @@ h1.sidenav {
     line-height: 1.2em;
 }
 
+
+.container{
+    background: pink;
+    height: 100px;
+    width: auto;
+}
+.context-menu {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 5px;
+    padding: 0;
+}
+
+
+.context-menu li{
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style-type: none;
+    transition: all .3s ease;
+    user-select: none;
+}
 .plotCalories {
     float: left;
     width: 10%;
@@ -175,3 +211,7 @@ h1.sidenav {
     line-height: 1.2em;
 }
 
+.context-menu li:hover{
+    background: pink;
+    border-left: 4px solid #666;
+}
