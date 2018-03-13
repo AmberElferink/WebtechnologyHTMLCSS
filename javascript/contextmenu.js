@@ -108,8 +108,8 @@ function functionColorBlue() {
 // JAVASCRIPT (jQuery)
 
 // Trigger action when the contexmenu is about to be shown
-$(document).bind(".context-menu", function (event) {
-
+$(document).bind("contextmenu", function (event) {
+    console.log("hoi");
     // Avoid the real one
     event.preventDefault();
 
@@ -126,8 +126,8 @@ $(document).bind(".context-menu", function (event) {
 
 // If the document is clicked somewhere
 $(document).bind("mousedown", function (e) {
-
-    // If the clicked element is not the menu
+console.log("haaaalo");
+// If the clicked element is not the menu
     if (!$(e.target).parents(".context-menu").length > 0) {
 
         // Hide it
