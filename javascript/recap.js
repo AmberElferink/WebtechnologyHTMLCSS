@@ -22,14 +22,20 @@ var box = class {
 };
 
 class recipe extends box {
-    constructor(title, id, text) {
+    constructor(title, text, link) {
         super(title);
-        this.addAttributes = function (node) {
 
+        this.addAttributes = function (node) {
 
             var article = document.createElement('article');
             article.setAttribute("class", "recipe");
             article.setAttribute("id", id);
+
+            var a = document.createElement('a');
+            a.href =  link;
+            a.innerHTML = "link";
+            article.appendChild(a);
+
 
             var paragraph = document.createElement('p');
             var textNode = document.createTextNode(text);
@@ -42,6 +48,30 @@ class recipe extends box {
             button.setAttribute("id", "showmore");
             button.appendChild(document.createTextNode("Show More"));
             node.appendChild(button);
+
+
+
+        };
+    }
+}
+
+class ingredient extends box {
+    constructor(title, id) {
+        super(title);
+        this.addAttributes = function (node) {
+
+
+            var article = document.createElement('article');
+            article.setAttribute("class", "ingredient");
+            article.setAttribute("id", id);
+
+            var paragraph = document.createElement('p');
+            var textNode = document.createTextNode(text);
+            paragraph.appendChild(textNode);
+            article.appendChild(paragraph);
+
+            node.appendChild(article);
+
         };
     }
 }
@@ -49,27 +79,83 @@ class recipe extends box {
 
 
 
-
-
-
 box1 = new box("Ik ben een box");
 box1.draw();
 
+
+// all starter method recaps
+recipeMelon = new recipe(
+    "Watermelon and Feta Salad",
+    "This salad is a great starter for any occasion. With the fresh flavor of watermelon and the creamyness of feta, is this a perfect starter for summer. It takes only 10 minutes!",
+    "starters.htm"
+);
+recipeMelon.draw();
+
+recipePrawn = new recipe(
+    "Prawn Cocktail",
+    "This second starter is somewhat complicated, with more ingredients. But it takes just minutes to make. It is just so easy.",
+    "starters.htm"
+);
+recipePrawn.draw();
+
+recipePinwheels = new recipe(
+    "Cheese and Bacon Pinwheels",
+    "This is the third and final starter, but not less exciting. " +
+    "The combination of cheese and bacon is amazing and effort it takes is nothing. For more info: ",
+    "starters.htm"
+);
+recipePinwheels.draw();
+
+// all main courses method recaps
+
+recipeGnocchi = new recipe(
+    "Gnocchi with Spinach and Ricotta",
+    "This easy and fresh Italian dish is so yummy. You will not get enough of it. " +
+    "It is also the fastest recipe for a filling meal, with taking only 10 minutes to cook",
+    "maincourses.htm"
+);
+recipeGnocchi.draw();
+
+recipeTortilla = new recipe(
+    "Italian Tortilla Wraps",
+    "You may think tortillas and Italian topping is a weird combination, but it is actually really dilicious. " +
+    "You slab the toppings on the wraps, in four easy steps, and you are ready to enjoy this meal."
+);
+recipeTortilla.draw();
+
+recipeSoup = new recipe(
+    "Pepper Soup",
+    "Pepper soup, if you have never had it, now is the time to try it. With just ten minutes and a couple of ingredients ",
+    "maincourses.htm"
+);
+recipeSoup.draw();
+
+// all desserts method recaps
+
 recipeChocolate = new recipe(
-    "Cherry Chocolate Mousse",  //titel
-    "contentchocolate", //id
-    "This chocolate mouse consist of 5 delicious ingredients, together making a heavenly mouse that you can not get enough of.\n" +
-    "            Made with dark chocolate, double cream, sugar, cherries and eggs. " //text
+    "Cherry Chocolate Mousse",
+    "Making chocolate mouse sounds difficult but is really easy, " +
+    "It maybe take some more time in advance, but trust me, it is so worth it!",
+    "desserts.htm"
 );
 recipeChocolate.draw();
 
-recipeMelon = new recipe(
-    "Watermelon and Feta Salad",
-    "contentmelon",
-    "This chocolate mouse consist of 5 delicious ingredients, together making a heavenly mouse that you can not get enough of.\n" +
-    "        Made with dark chocolate, double cream, sugar, cherries and eggs. "
-)
-recipeMelon.draw();
+recipeBlackberry = new recipe(
+    "Blackberry Fool",
+    "Blackberry fool is a delicious combination of yogurt and fruit. Easy and fresh, it does not get any better. It is also the fastest dessert to make. ",
+    "desserts.htm"
+);
+recipeBlackberry.draw();
+
+recipeBrownie = new recipe(
+    "Double Chocolate Brownies",
+    "Save the last for best! So this dessert may take the longest but tastes the best!" +
+    "50 minutes may seem long, but it is a fun process of melting, stiring and chopping! ",
+    "desserts.htm"
+);
+recipeBrownie.draw();
+
+
 
 
 var strchocolate = document.getElementById("contentchocolate");

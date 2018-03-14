@@ -120,11 +120,31 @@ table.paleRedRows tbody td {
     font-size: 13px;
 }
 
-.shiftformenu {
-    margin-right: 350px; /* Same as the width of the sidenav */
-    padding: 0 15px;
+
+.combinedPlots {
+    width: 950px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
 }
 
+.plotCalories {
+    float: left;
+    width: 10%;
+    height: 450px;
+}
+
+.plotIngredients {
+    position: absolute;
+    left: 150px;
+    width: 70%;
+    min-width: 500px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+/*
 aside.sidenav {
     height: 100%;
     width: 350px;
@@ -135,6 +155,10 @@ aside.sidenav {
     overflow-x: hidden;
 }
 
+.shiftformenu {
+    margin-right: 350px;
+    padding: 0 15px;
+}
 
 
 .favorites {
@@ -160,29 +184,7 @@ h1.sidenav {
     color: white;
 }
 
-.combinedPlots {
-    width: 950px;
-    height: 450px;
-    font-size: 14px;
-    line-height: 1.2em;
-}
-
-.plotCalories {
-    float: left;
-    width: 10%;
-    height: 450px;
-}
-
-.plotIngredients {
-    position: absolute;
-    left: 150px;
-    width: 70%;
-    min-width: 500px;
-    height: 450px;
-    font-size: 14px;
-    line-height: 1.2em;
-}
-
+*/
 
 .context-menu {
     width: 200px;

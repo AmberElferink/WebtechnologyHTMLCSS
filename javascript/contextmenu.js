@@ -57,6 +57,23 @@ function functionColorBlue() {
 
 }
 
+function functionCopy() {
+    document.execCommand("copy");
+
+
+}
+
+window.addEventListener("copy", function(event){
+    var text = window.getSelection().toString();
+    event.preventDefault();
+    if (event.clipboardData) {
+        event.clipboardData.setData("text/plain", text);
+
+
+    }
+}
+
+
 //When right clicked the context menu must be shown
 $(document).bind("contextmenu", function (event) {
 
