@@ -7,11 +7,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+
+    <script type=text/javascript src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type=text/javascript src="javascript/contextmenu.js"></script>
 </head>
 
 
 
-<body>
+<body id="text">
     <header>
         <img src="images/website-header.png" alt="layout of ingedrients">
     </header>
@@ -21,7 +24,17 @@
         <li><a href="starters.htm">Starters</a></li>
         <li><a href="maincourses.htm">Main courses</a></li>
         <li><a href="desserts.htm">Desserts</a></li>
+        <li><a href="plot.htm">Nutrition Values</a></li>
+        <li><a href="recap.htm">Recap</a></li>
         <li><a href="about.htm">About</a></li>
+    </ul>
+
+    <ul class="context-menu">
+        <li data-action="bold" onclick="functionBold()">Bold</li>
+        <li data-action="italic" onclick="functionItalic()">Italic</li>
+        <li data-action="pink" onclick="functionColorPink()">Text Color: Pink</li>
+        <li data-action="green" onclick="functionColorGreen()">Text Color: Green</li>
+        <li data-action="blue" onclick="functionColorBlue()">Text Color: Blue</li>
     </ul>
 
     <h3>Jump to: <a href="#starter1">Watermelon and Feta Salad</a>, <a href="#starter2">Prawn Cocktail</a>, <a href="#starter3">Cheese and Bacon Pinwheels</a></h3>
@@ -48,7 +61,7 @@
             <li>Peel and finely slice the onion, crumble the feta, then pick the mint leaves, tearing any larger ones.</li>
             <li>Place it all into a bowl and combine. Drizzle over a little oil and season with black pepper.</li>
         </ol>
-        Credits: <a href=https://www.jamieoliver.com/recipes/fruit-recipes/watermelon-feta-salad/>Jamie Oliver</a>
+        Credits: <a href=https://www.jamieoliver.com/recipes/fruit-recipes/watermelon-feta-salad/ target="_blank">Jamie Oliver</a>
     </article>
 
     <article>
@@ -95,7 +108,7 @@
             <li>Add the peeled prawns, dollop with marie rose sauce and finish with crabmeat, shrimps (if using) and more cress.</li>
             <li>Add a pinch of cayenne pepper and hang a hot prawn or two off the side of the bowl or jar. Serve with lemon wedges for squeezing over.</li>
         </ol>
-        Credits: <a href=https://www.jamieoliver.com/recipes/seafood-recipes/prawn-cocktail/>Jamie Oliver</a>
+        Credits: <a href=https://www.jamieoliver.com/recipes/seafood-recipes/prawn-cocktail/ target="_blank">Jamie Oliver</a>
         </article>
 
     <article>
@@ -127,7 +140,7 @@
             <li>Repeat the above steps with the second sheet of pastry but use the red sun-dried tomato pesto in place of green.</li>
             <li>Bake both batches of pinwheels for about 15 minutes, until crisp and golden. Serve warm.</li>
         </ol>
-        Credits: <a href=https://www.jamieoliver.com/recipes/cheese-recipes/cheese-bacon-pinwheels/>Jamie Oliver</a>
+        Credits: <a href=https://www.jamieoliver.com/recipes/cheese-recipes/cheese-bacon-pinwheels/" target="_blank">Jamie Oliver</a>
     </article>
 
 </body>

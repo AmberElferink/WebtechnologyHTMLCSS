@@ -7,10 +7,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+
+    <script type=text/javascript src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type=text/javascript src="javascript/contextmenu.js"></script>
 </head>
 
 
-<body>
+<body id="text">
 
     <header>
         <img src="images/website-header.png" alt="layout of ingedrients">
@@ -21,8 +24,24 @@
         <li><a href="starters.htm">Starters</a></li>
         <li><a href="maincourses.htm">Main courses</a></li>
         <li><a href="desserts.htm">Desserts</a></li>
+        <li><a href="plot.htm">Nutrition Values</a></li>
+        <li><a href="recap.htm">Recap</a></li>
         <li><a href="about.htm">About</a></li>
     </ul>
+
+    <!--- This menu is the context menu that is hidden at first but can be shown when the right mouse is clicked.
+    The article will be changed with the context menu. -->
+
+
+    <ul class="context-menu">
+        <li data-action="bold" onclick="functionBold()">Bold</li>
+        <li data-action="italic" onclick="functionItalic()">Italic</li>
+        <li data-action="pink" onclick="functionColorPink()">Text Color: Pink</li>
+        <li data-action="green" onclick="functionColorGreen()">Text Color: Green</li>
+        <li data-action="blue" onclick="functionColorBlue()">Text Color: Blue</li>
+    </ul>
+
+    <article>
 
     <h1>What are you eating tonight?</h1>
 
@@ -38,6 +57,8 @@
         If you see a unit you don't completely understand, have a look at the table below.
         With this, you can easily convert to another unit of your liking.
     </p>
+
+    </article>
 
     <table class="paleRedRows">
         <thead>
@@ -172,7 +193,7 @@
         </tbody>
     </table>
     <br>
-    Credits: <a href="http://startcooking.com/measurement-and-conversion-charts">Startcooking, Measurement and Conversion Charts</a>
+    Credits: <a href="http://startcooking.com/measurement-and-conversion-charts" target="_blank">Startcooking, Measurement and Conversion Charts</a>
     and Google Unit Converter
 
 </body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="The cooking site for people who love food, but do not love spending hours in the kitchen. Fast Dining is al about quick recipies with an amazing outcome, that give an chef like impresion to your friends and family. "
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles.css">
+        <title>Recipe nutrients</title>
+        <!--<link href="libraries/flot/examples/examples.css" rel="stylesheet" type="text/css">-->
+        <script type="text/javascript" src="libraries/flot/excanvas.min.js"></script>
+        <script type="text/javascript" src="libraries/flot/jquery.js"></script>
+        <script type="text/javascript" src="libraries/flot/jquery.min.js"></script>
+        <script type="text/javascript" src="libraries/flot/jquery.flot.js"></script>
+        <script type="text/javascript" src="libraries/flot/jquery.flot.axislabels.js"></script>
+        <script type="text/javascript" src="libraries/flot/jquery.flot.stack.js"></script>
+
+
+        <script type="text/javascript" src="javascript/plot.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="images/website-header.png" alt="layout of ingedrients">
+        </header>
+        <ul class="navigation">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="starters.htm">Starters</a></li>
+            <li><a href="maincourses.htm">Main courses</a></li>
+            <li><a href="desserts.htm">Desserts</a></li>
+            <li><a href="plot.htm">Nutrition Values</a></li>
+            <li><a href="recap.htm">Recap</a></li>
+            <li><a href="about.htm">About</a></li>
+        </ul>
+
+        <h1>Recipe nutrients</h1>
+        <section>
+
+            <figure class="combinedPlots">
+            <figure class="plotCalories"></figure>
+            <figure class="plotIngredients"></figure>
+            </figure>
+
+            <p><a href="http://www.myfitnesspal.com/food/calories/157795851">Data from myfitnesspal.com</a> </p>
+
+            <p class="graphControls">
+                <input type="checkbox" title="Add Watermelon and Feta Salad ingredients" id="melonsalad"> Watermelon and Feta Salad <br>
+                    <input type="checkbox" title="Add watermelon to graph" class="melon melonsalad" checked> melon <br>
+                    <input type="checkbox" title="Add feta to graph" class="feta melonsalad" checked> feta   <br>
+                    <input type="checkbox" title="Add red onion to graph" class="redOnion melonsalad"> red onion  <br>
+                    <input type="checkbox" title="Add mint to graph" class="mint melonsalad"> mint  <br>
+                    <input type="checkbox" title="Add olive oil to graph" class="oliveoil melonsalad"> olive oil <br>
+                <br>
+                <input type="checkbox" title="Add pepper soup ingredients" id="peppersoup"> Pepper soup <br>
+                    <input type="checkbox" title="Add white onion to graph" class="whiteonion peppersoup">white onion   <br>
+                    <input type="checkbox" title="Add garlic to graph" class="garlic peppersoup">garlic   <br>
+                    <input type="checkbox" title="Add red pepper to graph" class="redpepper peppersoup" checked> red pepper <br>
+                    <input type="checkbox" title="Add yellow pepper to graph" class="yellowpepper peppersoup"> yellow pepper  <br>
+                    <input type="checkbox" title="Add sourcreme to graph" class="sourcreme peppersoup"> sour creme  <br>
+                <br>
+                <input type="checkbox" title="Add brownie ingredients" id="brownies"> Brownies <br>
+                    <input type="checkbox" title="Add chocolate to graph" class="chocolate brownies">  chocolate  <br>
+                    <input type="checkbox" title="Add cherries to graph" class="cherries brownies"> cherries <br>
+                    <input type="checkbox" title="Add double cream to graph" class="doublecream brownies"> double cream  <br>
+                    <input type="checkbox" title="Add eggs to graph" class="eggs brownies"> eggs  <br>
+                    <input type="checkbox" title="Add golden sugar to graph" class="goldensugar "> golden sugar   <br>
+                </p>
+
+        </section>
+
+    </body>
+</html>

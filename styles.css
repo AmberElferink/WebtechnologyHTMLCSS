@@ -1,9 +1,14 @@
+html, body {
+    height: 100%;
+}
+
 body
 {
     font-family: "Calibri", serif;
     color: black;
     background-color: transparent;
 }
+
 
 h1
 {
@@ -66,11 +71,14 @@ img.icon{
     border:0;
 }
 
-video.displayed{
+#displayed{
     display:block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    height: 315px;
+    frameborder: 0px;
+
 }
 
 .ingredients{
@@ -112,4 +120,159 @@ table.paleRedRows tbody td {
     font-size: 13px;
 }
 
+.shiftformenu {
+    margin-right: 350px; /* Same as the width of the sidenav */
+    padding: 0 15px;
+}
 
+aside.sidenav {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: grey;
+    overflow-x: hidden;
+}
+
+
+
+.favorites {
+    height: 50%;
+    width: 340px;
+    float: right;
+    background: white;
+    overflow-y: auto;
+}
+
+.shoppinglist {
+    height: 50%;
+    width: 340px;
+    float: right;
+    background: white;
+    overflow-y: auto;
+}
+
+h1.sidenav {
+    margin: 0;
+    padding: 15px;
+    background-color: #B02721;
+    color: white;
+}
+
+.combinedPlots {
+    width: 950px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.plotCalories {
+    float: left;
+    width: 10%;
+    height: 450px;
+}
+
+.plotIngredients {
+    position: absolute;
+    left: 150px;
+    width: 70%;
+    min-width: 500px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+
+.context-menu {
+    width: 200px;
+    height: auto;
+    box-shadow: 0 0 20px 0 #ccc;
+    position: absolute;
+    display: none;
+    background: white;
+    list-style: none;
+    padding: 5px 0px 5px 0px;
+
+
+}
+
+.context-menu li{
+    padding: 10px 5px 10px 5px;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+
+}
+
+
+.context-menu li:hover{
+    background: #B02721;
+    color: white;
+}
+
+.closed{
+    width: 300px;
+    background: #FFEAEA;
+    margin:0;
+    max-height: 0px;
+    overflow: hidden;
+
+
+}
+
+.open {
+    max-height: 400px;
+    width: auto;
+    padding: 20px 20px 20px 20px;
+}
+
+#contentmelon {
+    width: 300px;
+    background: #FFEAEA;
+    margin:0;
+    max-height: 30px;
+    overflow: hidden;
+    padding: 20px 20px 20px 20px;
+
+}
+
+#contentmelon.open {
+    max-height: 400px;
+}
+
+#showmore {
+    background: #B02721;
+    height: auto;
+    width: auto;
+    padding: 10px 10px 10px 10px;
+    color: white;
+}
+
+#showmoremelon {
+    background: #B02721;
+    height: auto;
+    width: auto;
+    padding: 10px 10px 10px 10px;
+    color: white;
+}
+
+.section
+{
+    width: 300px;
+    background: #FFEAEA;
+    margin:0;
+    overflow: hidden;
+    padding-left: 20px;
+    border-style: solid;
+    border: white;
+    border-width: 5px;
+}
+
+.boxTitle
+{
+    height: 50%;
+    width: 340px;
+    float: right;
+    overflow-y: auto;
+
+}
