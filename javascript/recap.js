@@ -41,6 +41,8 @@ class recipe extends box {
             paragraph.appendChild(textNode);
             article.appendChild(paragraph);
 
+
+
             node.appendChild(article);
 
             var button = document.createElement('button');
@@ -48,11 +50,38 @@ class recipe extends box {
             button.appendChild(document.createTextNode("Show More"));
             node.appendChild(button);
         };
+
     }
 }
 
+class ingredients extends box {
+    constructor(ingredients) {
+        super("Ingredients");
+        this.addAttributes = function (node) {
 
 
+            var article = document.createElement('article');
+            article.setAttribute("class", "closed");
+
+            var list = document.createElement('ul');
+
+            for(var i =0; i<ingredients.length; i++)
+            {
+                var ingredient = document.createElement('li');
+                ingredient.appendChild(document.createTextNode(ingredients[i]));
+                list.appendChild(ingredient);
+            }
+            article.appendChild(list);
+
+            node.appendChild(article);
+
+            var button = document.createElement('button');
+            button.setAttribute("class", "showIngredients");
+            button.appendChild(document.createTextNode("Show Ingredients"));
+            node.appendChild(button);
+        };
+    }
+}
 
 
 
@@ -60,9 +89,19 @@ class recipe extends box {
 recipeMelon = new recipe(
     "Watermelon and Feta Salad",
     "This salad is a great starter for any occasion. With the fresh flavor of watermelon and the creamyness of feta, is this a perfect starter for summer. It takes only 10 minutes!",
-    "starters.htm"
+    "starters.htm",
+    "ingredientsMelon"
 );
 recipeMelon.draw();
+ingredientsMelon = new ingredients(
+    ["700 g watermelon",
+        "1 small red onion",
+        "180 g feta cheese",
+        "1 bunch of fresh mint",
+        "extra vergin olive oil"
+    ]
+);
+ingredientsMelon.draw();
 
 recipePrawn = new recipe(
     "Prawn Cocktail",
@@ -138,11 +177,23 @@ $(":button").click( function() {
             //als het stukje uitleg voor de knop open is, haalt hij class open weg, en sluit hij dus
             this.previousSibling.classList.remove("open");
             this.previousSibling.classList.add("closed");
-            this.innerHTML = "Show More";
+            if(this.className == "showIngredients") {
+                this.innerHTML = "Show Ingredients";
+
+            }
+            else{
+                this.innerHTML = "Show More";
+            }
         } else if(this.previousSibling.className == "closed") {
             //als het stukje uitleg ervoor niet open is, gaat hij open
             this.previousSibling.className = "open";
-            this.innerHTML = "Show Less";
+            if(this.className == "showIngredients")
+            {
+                this.innerHTML = "Hide Ingredients";
+            }
+            else {
+                this.innerHTML = "Show Less";
+            }
         }
     }
 });
