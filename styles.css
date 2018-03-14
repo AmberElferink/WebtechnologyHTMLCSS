@@ -253,3 +253,8 @@ h1.sidenav {
     padding: 10px 10px 10px 10px;
     color: white;
 }
+
+#article
+{
+    color: green;
+}

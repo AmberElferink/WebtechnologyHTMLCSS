@@ -2,19 +2,24 @@ var Box = class {
     constructor(title){
         this.title = title;
         this.draw = function () {
-            var node = document.createElement("h1");
+            var node = document.createElement("article");
+            this.addAttributes(node);
             var textnode = document.createTextNode(this.title);
             node.appendChild(textnode);
             document.body.appendChild(node);
-
         };
+        this.addAttributes = function (node) {
+            node.setAttribute("id", "article");
+        }
     }
 }
 
 class Recipe extends Box {
     constructor(title) {
         super(title);
-
+        this.addAttributes = function (node) {
+            node.setAttribute("id", "recipe");
+        }
         
         var strchocolate = document.getElementById("contentchocolate");
         var button = document.getElementById("showmore");
