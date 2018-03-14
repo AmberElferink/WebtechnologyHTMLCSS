@@ -240,7 +240,7 @@ h1.sidenav {
     max-height: 400px;
 }
 
-#showmore {
+.showmore {
     background: #B02721;
     height: auto;
     width: auto;

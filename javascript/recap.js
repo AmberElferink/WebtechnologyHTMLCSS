@@ -138,9 +138,11 @@ $(":button").click( function() {
             //als het stukje uitleg voor de knop open is, haalt hij class open weg, en sluit hij dus
             this.previousSibling.classList.remove("open");
             this.previousSibling.classList.add("closed");
+            this.innerHTML = "Show More";
         } else if(this.previousSibling.className == "closed") {
             //als het stukje uitleg ervoor niet open is, gaat hij open
             this.previousSibling.className = "open";
+            this.innerHTML = "Show Less";
         }
     }
 });
