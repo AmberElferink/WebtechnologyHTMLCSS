@@ -13,7 +13,7 @@
 </head>
 
 
-<body>
+<body id="text">
 
     <header>
         <img src="images/website-header.png" alt="layout of ingedrients">
@@ -25,26 +25,27 @@
         <li><a href="maincourses.htm">Main courses</a></li>
         <li><a href="desserts.htm">Desserts</a></li>
         <li><a href="plot.htm">Nutrition Values</a></li>
+        <li><a href="recap.htm">Recap</a></li>
         <li><a href="about.htm">About</a></li>
     </ul>
 
-    <!--- <div class="container" oncontextmenu="showContextMenu();"></div>
-    <div id="contextMenu" class="context-menu"> -->
+    <!--- This menu is the context menu that is hidden at first but can be shown when the right mouse is clicked.
+    The article will be changed with the context menu. -->
+
+
     <ul class="context-menu">
-        <li data-action="bold">Bold</li>
-        <li data-action="italic">Italic</li>
-        <li data-action="pink">Text Color: Pink</li>
-        <li data-action="green">Text Color: Green</li>
-        <li data-action="blue">Text Color: Blue</li>
+        <li data-action="bold" onclick="functionBold()">Bold</li>
+        <li data-action="italic" onclick="functionItalic()">Italic</li>
+        <li data-action="pink" onclick="functionColorPink()">Text Color: Pink</li>
+        <li data-action="green" onclick="functionColorGreen()">Text Color: Green</li>
+        <li data-action="blue" onclick="functionColorBlue()">Text Color: Blue</li>
     </ul>
 
-
-
-    <!--- <button type="button" onclick="myFunction()">Text color: Pink</button> --->
+    <article>
 
     <h1>What are you eating tonight?</h1>
 
-    <p id="paragraaf">Have a look around! You will be able to find many quick to prepare and very tasty meals.
+    <p>Have a look around! You will be able to find many quick to prepare and very tasty meals.
     Impress your friends or parents maybe with your cooking skills, without a sweat of work.
     Do you fancy a soup or rather have pasta? It's all there!</p>
 
@@ -56,6 +57,8 @@
         If you see a unit you don't completely understand, have a look at the table below.
         With this, you can easily convert to another unit of your liking.
     </p>
+
+    </article>
 
     <table class="paleRedRows">
         <thead>
