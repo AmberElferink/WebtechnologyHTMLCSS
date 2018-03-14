@@ -1,5 +1,6 @@
 $(function() {
-//http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
+    //interact van: http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
+    //tutorial gebruikt: http://www.jqueryflottutorial.com/how-to-make-jquery-flot-bar-chart.html
 
 //DATA
     //data for the watermelon and feta starter recipe
@@ -243,7 +244,6 @@ $(function() {
         },
         yaxis: {
             axisLabel: "g/ 100g",
-            max: 100,
             min: 0
         },
         grid: {
