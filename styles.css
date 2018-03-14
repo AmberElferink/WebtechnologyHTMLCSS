@@ -214,14 +214,16 @@ h1.sidenav {
     width: 300px;
     background: #FFEAEA;
     margin:0;
-    max-height: 30px;
+    max-height: 0px;
     overflow: hidden;
-    padding: 20px 20px 20px 20px;
+
 
 }
 
 #contentchocolate.open {
     max-height: 400px;
+    width: auto;
+    padding: 20px 20px 20px 20px;
 }
 
 #contentmelon {
@@ -254,7 +256,23 @@ h1.sidenav {
     color: white;
 }
 
-#article
+.section
 {
-    color: green;
+    width: 300px;
+    background: #FFEAEA;
+    margin:0;
+    overflow: hidden;
+    padding-left: 20px;
+    border-style: solid;
+    border: white;
+    border-width: 5px;
+}
+
+.boxTitle
+{
+    height: 50%;
+    width: 340px;
+    float: right;
+    overflow-y: auto;
+
 }
