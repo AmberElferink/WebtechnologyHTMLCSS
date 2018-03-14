@@ -56,29 +56,8 @@ function functionColorBlue() {
     }
 }
 
-function functionCopy(event) {
-    event.preventDefault();
-    console.log(getSelectedText());
-}
-$("html, body").on("click", "#copy", function(event) {
-    event.preventDefault();
-
-        window.getSelection();
-        return document.execCommand("copy");
 
 
-});
-
-document.onkeyup = function(event){
-functionCopy(event);
-};
-
-/*$($('li[id=copy]')).click(function(event){
-    event.preventDefault();
-    event.stopPropagation();
-    console.log(getSelectedText());
-
-});*/
 
 
 //When right clicked the context menu must be shown
