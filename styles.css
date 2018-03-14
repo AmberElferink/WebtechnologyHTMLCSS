@@ -9,10 +9,7 @@ body
     background-color: transparent;
 }
 
-*{
-    margin:0;
-    padding:0;
-}
+
 h1
 {
         color: #801D18;
@@ -74,11 +71,14 @@ img.icon{
     border:0;
 }
 
-video.displayed{
+#displayed{
     display:block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    height: 315px;
+    frameborder: 0px;
+
 }
 
 .ingredients{
@@ -224,7 +224,29 @@ h1.sidenav {
     max-height: 400px;
 }
 
+#contentmelon {
+    width: 300px;
+    background: #FFEAEA;
+    margin:0;
+    max-height: 30px;
+    overflow: hidden;
+    padding: 20px 20px 20px 20px;
+
+}
+
+#contentmelon.open {
+    max-height: 400px;
+}
+
 #showmore {
+    background: #B02721;
+    height: auto;
+    width: auto;
+    padding: 10px 10px 10px 10px;
+    color: white;
+}
+
+#showmoremelon {
     background: #B02721;
     height: auto;
     width: auto;

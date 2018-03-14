@@ -15,6 +15,7 @@ class Recipe extends Box {
     constructor(title) {
         super(title);
 
+        
         var strchocolate = document.getElementById("contentchocolate");
         var button = document.getElementById("showmore");
 
@@ -25,6 +26,23 @@ class Recipe extends Box {
                 button.innerHTML = "show more";
             } else {
                 strchocolate.className = "open";
+                button.innerHTML = "show less";
+
+            }
+
+        };
+
+
+        var strmelon = document.getElementById("contentmelon");
+        var button = document.getElementById("showmoremelon");
+
+        button.onclick =  function() {
+            if (strmelon.className == "open"){
+                // string hide
+                strmelon.className = "";
+                button.innerHTML = "show more";
+            } else {
+                strmelon.className = "open";
                 button.innerHTML = "show less";
 
             }
