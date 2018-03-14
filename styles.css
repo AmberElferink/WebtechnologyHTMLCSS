@@ -228,6 +228,7 @@ h1.sidenav {
 
 
 .showmore  {
+    display:inline-block;
     background: #B02721;
     height: auto;
     width: auto;
@@ -237,6 +238,7 @@ h1.sidenav {
 
 
 .showIngredients  {
+    display: inline-block;
     background: #B02721;
     height: auto;
     width: auto;
@@ -256,6 +258,7 @@ h1.sidenav {
     border: white;
     border-width: 5px;
 }
+
 
 .boxTitle
 {

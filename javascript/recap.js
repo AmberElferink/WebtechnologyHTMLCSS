@@ -54,9 +54,9 @@ class recipe extends box {
     }
 }
 
-class ingredients extends box {
+class ingredients {
     constructor(ingredients) {
-        super("Ingredients");
+
         this.addAttributes = function (node) {
 
 
@@ -79,6 +79,14 @@ class ingredients extends box {
             button.setAttribute("class", "showIngredients");
             button.appendChild(document.createTextNode("Show Ingredients"));
             node.appendChild(button);
+        };
+        this.draw = function () {
+            var node = document.createElement("section");
+            node.setAttribute("class", "section");
+
+            this.addAttributes(node);
+
+            document.body.appendChild(node);
         };
     }
 }
