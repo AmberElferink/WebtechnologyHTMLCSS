@@ -210,7 +210,7 @@ h1.sidenav {
     color: white;
 }
 
-#contentchocolate {
+.content {
     width: 300px;
     background: #FFEAEA;
     margin:0;
@@ -220,23 +220,11 @@ h1.sidenav {
 
 }
 
-#contentchocolate.open {
+.content.open {
     max-height: 400px;
 }
 
-#contentmelon {
-    width: 300px;
-    background: #FFEAEA;
-    margin:0;
-    max-height: 30px;
-    overflow: hidden;
-    padding: 20px 20px 20px 20px;
 
-}
-
-#contentmelon.open {
-    max-height: 400px;
-}
 
 #showmore {
     background: #B02721;
