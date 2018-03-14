@@ -90,7 +90,118 @@ class ingredients {
         };
     }
 }
+//ingredient lists starters
 
+ingredientsMelon = new ingredients(
+    [ " 700 g watermelon",
+        "1 small red onion",
+        "180 g feta cheese",
+        "1 bunch of fresh mint",
+        "extra vergin olive oil"
+    ]
+);
+
+ingredientsPrawn = new ingredients(
+    [" olive oil",
+        "half a clove of garlic",
+        "cayenne pepper",
+        "8 unpeeled large, raw tiger prawns",
+        "quarter of an iceberg lettuce",
+        "quarter of a cucumber",
+        "1-2 ripe tomatoes",
+        "1 sprig of fresh mint",
+        "1 small punnet of salad cress",
+        "50 g peeled little prawns",
+        "100 g mixed white and brown crabmeat",
+        "50 g brown shrimps , optional",
+        "1 lemon",
+        "half a lemon",
+        "1 swig of brandy",
+        "1 pinch of cayenne pepper",
+        "1 heaped teaspooon ketchup",
+        "4 tablespoons mayonnaise, made from free-range eggs"
+    ]
+);
+
+ingredientsPinwheels = new ingredients(
+    [ "plain flour , for dusting",
+        "500 g ready-made puff pastry",
+        "2 tablespoons basil pesto",
+        "12 thin slices higher-welfare smoked pancetta",
+        "4 tablespoons grated Parmesan cheese",
+        "1 tablespoon milk",
+        "2 tablespoons sun-dried tomato pesto"
+    ]
+);
+
+//ingredient lists main courses
+
+ingredientsGnocchi = new ingredients(
+    [ "Hand of gnocchi",
+        "Two hands fresh spinach",
+        "2 tablespoons ricotta",
+        "Hand of parmesan cheese",
+        "1 tablespoon pine nuts",
+        "½ lemon",
+        "Some pepper",
+        "Some fresh parsley"
+    ]
+);
+
+ingredientsTortilla = new ingredients(
+    [ "3-4 wraps",
+        "passata di pomodoro (tomato purée)",
+        "buffalo mozzarella",
+        "parma ham",
+        "rucola salad",
+        "pine nuts",
+        "Italian Flakes (parmesan cheese)"
+    ]
+
+);
+
+ingredientsSoup = new ingredients(
+    [ "1 onion",
+        "1 clove of garlic",
+        "1 red pepper",
+        "½ yellow/orange pepper",
+        "1 tablespoon sour cream"
+    ]
+);
+
+//ingredient lists main courses
+
+ingredientsChocolate = new ingredients(
+    [ "200 g quality dark chocolate",
+        "400 g pitted cherries in syrup",
+        "200 ml double cream",
+        "4 large free-range eggs",
+        "2 tablespoons of golden caster sugar"
+    ]
+);
+
+ingredientsBlackberry = new ingredients(
+    [  "1 vanilla pod",
+        "500 g blackberries",
+        "100 g caster sugar",
+        "1 lemon",
+        "330 ml double cream",
+        "200 ml fat-free Greek yogurt"
+    ]
+);
+
+ingredientsBrownie = new ingredients(
+    [ "180 g butter, plus extra for greasing",
+        "150 g self-raising flour, plus extra for dusting",
+        "300 g sugar",
+        "half a teaspoon of vanilla extract",
+        "3 large free-range eggs",
+        "75 g dark chocolate",
+        "75 g white chocolate",
+        "100 g hazelnuts",
+        "1 tablespoon cacoa powder"
+    ]
+);
 
 
 // all starter method recaps
@@ -101,14 +212,6 @@ recipeMelon = new recipe(
     "ingredientsMelon"
 );
 recipeMelon.draw();
-ingredientsMelon = new ingredients(
-    ["700 g watermelon",
-        "1 small red onion",
-        "180 g feta cheese",
-        "1 bunch of fresh mint",
-        "extra vergin olive oil"
-    ]
-);
 ingredientsMelon.draw();
 
 recipePrawn = new recipe(
@@ -117,6 +220,7 @@ recipePrawn = new recipe(
     "starters.htm"
 );
 recipePrawn.draw();
+ingredientsPrawn.draw();
 
 recipePinwheels = new recipe(
     "Cheese and Bacon Pinwheels",
@@ -125,6 +229,7 @@ recipePinwheels = new recipe(
     "starters.htm"
 );
 recipePinwheels.draw();
+ingredientsPinwheels.draw();
 
 // all main courses method recaps
 
@@ -135,6 +240,7 @@ recipeGnocchi = new recipe(
     "maincourses.htm"
 );
 recipeGnocchi.draw();
+ingredientsGnocchi.draw();
 
 recipeTortilla = new recipe(
     "Italian Tortilla Wraps",
@@ -142,6 +248,7 @@ recipeTortilla = new recipe(
     "You slab the toppings on the wraps, in four easy steps, and you are ready to enjoy this meal."
 );
 recipeTortilla.draw();
+ingredientsTortilla.draw();
 
 recipeSoup = new recipe(
     "Pepper Soup",
@@ -149,6 +256,7 @@ recipeSoup = new recipe(
     "maincourses.htm"
 );
 recipeSoup.draw();
+ingredientsSoup.draw();
 
 // all desserts method recaps
 
@@ -159,6 +267,7 @@ recipeChocolate = new recipe(
     "desserts.htm"
 );
 recipeChocolate.draw();
+ingredientsChocolate.draw();
 
 recipeBlackberry = new recipe(
     "Blackberry Fool",
@@ -166,6 +275,7 @@ recipeBlackberry = new recipe(
     "desserts.htm"
 );
 recipeBlackberry.draw();
+ingredientsBlackberry.draw();
 
 recipeBrownie = new recipe(
     "Double Chocolate Brownies",
@@ -174,13 +284,13 @@ recipeBrownie = new recipe(
     "desserts.htm"
 );
 recipeBrownie.draw();
+ingredientsBrownie.draw();
 
 
 
 
 $(":button").click( function() {
     {
-        console.log(this.previousSibling);
         if (this.previousSibling.className == "open") {
             //als het stukje uitleg voor de knop open is, haalt hij class open weg, en sluit hij dus
             this.previousSibling.classList.remove("open");
