@@ -244,8 +244,7 @@ $(function() {
         },
         yaxis: {
             axisLabel: "g/ 100g",
-            max: 100,
-            min: 01
+            min: 0
         },
         grid: {
             clickable: true,
@@ -330,10 +329,6 @@ $(function() {
         caloriedata = caloriedata.concat([[data[0]]]);
         nutrientdata = nutrientdata.concat([data.slice(1, data.length)]);
         plotChart();
-        console.log("new log");
-        console.log(alldata);
-        console.log(caloriedata);
-        console.log(nutrientdata);
     }
 
     //removes data from the plot
