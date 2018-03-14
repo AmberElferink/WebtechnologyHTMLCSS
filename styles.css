@@ -167,12 +167,23 @@ h1.sidenav {
     line-height: 1.2em;
 }
 
-
-.container{
-    background: pink;
-    height: 100px;
-    width: auto;
+.plotCalories {
+    float: left;
+    width: 10%;
+    height: 450px;
 }
+
+.plotIngredients {
+    position: absolute;
+    left: 150px;
+    width: 70%;
+    min-width: 500px;
+    height: 450px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+
 .context-menu {
     width: 200px;
     height: auto;
@@ -192,23 +203,31 @@ h1.sidenav {
     cursor: pointer;
 
 }
-.plotCalories {
-    float: left;
-    width: 10%;
-    height: 450px;
-}
 
-.plotIngredients {
-    position: absolute;
-    left: 150px;
-    width: 70%;
-    min-width: 500px;
-    height: 450px;
-    font-size: 14px;
-    line-height: 1.2em;
-}
 
 .context-menu li:hover{
     background: #B02721;
+    color: white;
+}
+
+#contentchocolate {
+    width: 300px;
+    background: #FFEAEA;
+    margin:0;
+    max-height: 30px;
+    overflow: hidden;
+    padding: 20px 20px 20px 20px;
+
+}
+
+#contentchocolate.open {
+    max-height: 400px;
+}
+
+#showmore {
+    background: #B02721;
+    height: auto;
+    width: auto;
+    padding: 10px 10px 10px 10px;
     color: white;
 }
