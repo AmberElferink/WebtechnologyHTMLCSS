@@ -1,3 +1,9 @@
+
+// references used for this code
+// https://www.youtube.com/watch?v=XQEfWd1lh4Q
+// https://stackoverflow.com/questions/9831074/dynamically-create-link-javascript
+
+
 var box = class {
     constructor(title){
         this.title = title;

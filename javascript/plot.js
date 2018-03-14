@@ -244,7 +244,8 @@ $(function() {
         },
         yaxis: {
             axisLabel: "g/ 100g",
-            min: 0
+            max: 100,
+            min: 01
         },
         grid: {
             clickable: true,
@@ -369,7 +370,8 @@ $(function() {
 
         return html;
     }
-//TO DO: hover weghalen als geen tijd meer.
+
+
     function bindEvents (){
         $('.plotIngredients').on('plothover', function (event, pos, item) {
             var offset = { height: 0, width: 0};
@@ -389,13 +391,5 @@ $(function() {
 
         });
     }
-
-    //TO DO
-    $(".plotIngredients").bind("plotclick", function (event, pos, item) {
-        if (item) {
-            console.log("item no." + item.dataIndex + " in " + item.series.label + " clicked");
-        }
-    });
-
 
 });

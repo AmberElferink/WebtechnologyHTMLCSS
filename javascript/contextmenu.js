@@ -4,6 +4,9 @@ var isPink = false;
 var isGreen = false;
 var isBlue= false;
 
+//references used to make this code
+//https://stackoverflow.com/questions/4495626/making-custom-right-click-context-menus-for-my-web-app
+
 function functionBold() {
     if (isBold) {
         isBold = false;
