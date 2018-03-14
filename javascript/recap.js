@@ -46,6 +46,7 @@ class recipe extends box {
     }
 }
 
+        div.appendChild(text);
 
 
 
