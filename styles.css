@@ -226,21 +226,9 @@ h1.sidenav {
     padding: 20px 20px 20px 20px;
 }
 
-#contentmelon {
-    width: 300px;
-    background: #FFEAEA;
-    margin:0;
-    max-height: 30px;
-    overflow: hidden;
-    padding: 20px 20px 20px 20px;
 
-}
-
-#contentmelon.open {
-    max-height: 400px;
-}
-
-.showmore {
+.showmore  {
+    display:inline-block;
     background: #B02721;
     height: auto;
     width: auto;
@@ -248,13 +236,16 @@ h1.sidenav {
     color: white;
 }
 
-#showmoremelon {
+
+.showIngredients  {
+    display: inline-block;
     background: #B02721;
     height: auto;
     width: auto;
     padding: 10px 10px 10px 10px;
     color: white;
 }
+
 
 .section
 {
@@ -267,6 +258,7 @@ h1.sidenav {
     border: white;
     border-width: 5px;
 }
+
 
 .boxTitle
 {
