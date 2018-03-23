@@ -1,5 +1,6 @@
 $(function() {
-//http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
+    //interact van: http://bseth99.github.io/projects/canvas/A-flot-interact-labels.html
+    //tutorial gebruikt: http://www.jqueryflottutorial.com/how-to-make-jquery-flot-bar-chart.html
 
 //DATA
     //data for the watermelon and feta starter recipe
@@ -243,7 +244,6 @@ $(function() {
         },
         yaxis: {
             axisLabel: "g/ 100g",
-            max: 100,
             min: 0
         },
         grid: {
@@ -329,10 +329,6 @@ $(function() {
         caloriedata = caloriedata.concat([[data[0]]]);
         nutrientdata = nutrientdata.concat([data.slice(1, data.length)]);
         plotChart();
-        console.log("new log");
-        console.log(alldata);
-        console.log(caloriedata);
-        console.log(nutrientdata);
     }
 
     //removes data from the plot
@@ -369,7 +365,8 @@ $(function() {
 
         return html;
     }
-//TO DO: hover weghalen als geen tijd meer.
+
+
     function bindEvents (){
         $('.plotIngredients').on('plothover', function (event, pos, item) {
             var offset = { height: 0, width: 0};
@@ -389,13 +386,5 @@ $(function() {
 
         });
     }
-
-    //TO DO
-    $(".plotIngredients").bind("plotclick", function (event, pos, item) {
-        if (item) {
-            console.log("item no." + item.dataIndex + " in " + item.series.label + " clicked");
-        }
-    });
-
 
 });
