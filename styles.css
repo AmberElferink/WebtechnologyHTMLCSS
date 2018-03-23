@@ -210,7 +210,7 @@ h1.sidenav {
     color: white;
 }
 
-.content {
+.closed{
     width: 300px;
     background: #FFEAEA;
     margin:0;
@@ -220,15 +220,15 @@ h1.sidenav {
 
 }
 
-.content.open {
+.open {
     max-height: 400px;
     width: auto;
     padding: 20px 20px 20px 20px;
 }
 
 
-
-#showmore {
+.showmore  {
+    display:inline-block;
     background: #B02721;
     height: auto;
     width: auto;
@@ -236,13 +236,16 @@ h1.sidenav {
     color: white;
 }
 
-#showmoremelon {
+
+.showIngredients  {
+    display: inline-block;
     background: #B02721;
     height: auto;
     width: auto;
     padding: 10px 10px 10px 10px;
     color: white;
 }
+
 
 .section
 {
@@ -255,6 +258,7 @@ h1.sidenav {
     border: white;
     border-width: 5px;
 }
+
 
 .boxTitle
 {
